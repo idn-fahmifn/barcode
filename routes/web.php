@@ -15,8 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('buku', 'BukuController');
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('buku', 'BukuController');
+Route::resource('user', 'UserController');
+Route::resource('absen', 'AbsenController');
+
